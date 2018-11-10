@@ -134,7 +134,7 @@ ordered_agg<-agg[order(agg$Subjects),]
 ## Delete ActivityCode Column
 tidy <- select(ordered_agg, -ActivityCode)
 ## Write to .txt file
-write.table(tidy, file = "tidy.txt", row.names = FALSE)
+write.table(tidy, file = "tidy.txt", row.names = FALSE, quote = FALSE)
 
 end_time <- Sys.time()
 
